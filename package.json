@@ -1,0 +1,42 @@
+{
+  "name": "react-app-template",
+  "version": "1.0.0",
+  "description": "",
+  "dockerRepo": "razmusanderson/discord-image-autoposter",
+  "dockerLatest": "0.3",
+  "scripts": {
+    "start": "node src/main.js",
+    "bot": "node src/client/bot.js",
+    "server": "node src/server/server.js",
+    "build": "REPO=razmusanderson/discord-image-autoposter; VERSION=latest; docker build . -t $REPO:$VERSION",
+    "push": "REPO=razmusanderson/discord-image-autoposter; VERSION=latest; docker push $REPO:$VERSION",
+    "buildandpush": "npm run build && npm run push",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashketchupppp/discord-image-autoposter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashketchupppp/discord-image-autoposter/issues"
+  },
+  "homepage": "https://github.com/ashketchupppp/discord-image-autoposter#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonschema": "^1.4.0",
+    "logger": "0.0.1",
+    "mongodb": "^3.6.9",
+    "winston": "^3.3.3",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "eslint": "^7.29.0",
+    "jest": "^27.0.6"
+  }
+}
